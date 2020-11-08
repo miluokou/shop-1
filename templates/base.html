@@ -1,141 +1,627 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>{% block title %}{% endblock title %}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<!-- FAVICONS -->
-		<link rel="shortcut icon" href="{% static 'icons/favicon.png'%}  " />
-		<!-- GOOGLE WEB FONTS -->
-		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}  %}">
+<head>
+	<title>{% block title %}{% endblock title %}</title>
+	<meta charset="utf-8" />
 
-		<!-- BOOTSTRAP 3.3.7 CSS -->
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}  " />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+	<!-- FAVICONS -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'icons/apple-touch-icon-144-precomposed.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'icons/apple-touch-icon-114-precomposed.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'icons/apple-touch-icon-72-precomposed.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'icons/apple-touch-icon-57-precomposed.png' %}" />
+    <link rel="shortcut icon" href="{% static 'icons/favicon.png' %}" />
 
-		<!-- SLICK v1.6.0 CSS -->
-		<link rel="stylesheet" href="{% static 'css/slick-1.6.0/slick.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/yith-woocommerce-compare/colorbox.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.theme.default.min.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/js_composer/js_composer.min.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/woocommerce/woocommerce.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/yith-woocommerce-wishlist/style.css' %} " />
+	<!-- GOOGLE WEB FONTS -->
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 
-		<link rel="stylesheet" href="{% static 'css/custom.css' %} " />
-		<link rel="stylesheet" href="{% static 'css/app-orange.css' %} " id="theme_color" />
-		<link rel="stylesheet" href=" " id="rtl" />
-		<link rel="stylesheet" href="{% static 'css/app-responsive.css' %} " />
-        {% block head %}{% endblock head %}
-	</head>
+	<!-- BOOTSTRAP 3.3.7 CSS -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
 
-	<body class="page home-style1">
-        {% block body %}{% endblock body %}
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/yith-woocommerce-compare/colorbox.css' %}" />
 
-		<!-- DIALOGS -->
-        {#  登录模态框 #}
-		<div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog block-popup-login">
-				<a href=" javascript:void(0)" title="Close" class="close close-login" data-dismiss="modal">Close</a>
+	<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.theme.default.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/js_composer/js_composer.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/woocommerce/woocommerce.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/yith-woocommerce-wishlist/style.css' %}" />
 
-				<div class="tt_popup_login">
-					<strong>Sign in Or Register</strong>
+	<link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/app-orange.css' %}" id="theme_color" />
+	<link rel="stylesheet" href="" id="rtl" />
+	<link rel="stylesheet" href="{% static 'css/app-responsive.css' %}" />
+    {% block css %}{% endblock css %}
+</head>
+<body class="page home-style4">
+	<div class="body-wrapper theme-clearfix">
+		<header id="header" class="header header-style4">
+			<div class="header-top clearfix">
+				<div class="container">
+					<div class="rows">
+						<!-- SIDEBAR TOP MENU -->
+						<div class="pull-left top1">
+							<div class="widget text-2 widget_text pull-left">
+								<div class="widget-inner">
+									<div class="textwidget">
+										<div class="call-us"><span>联系电话:</span>0123-444-666654123</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget text-3 widget_text pull-left">
+								<div class="widget-inner">
+									<div class="textwidget">
+										<div id="lang_sel">
+											<ul class="nav">
+												<li>
+													<a class="lang_sel_sel icl-en">
+														<img class="iclflag" title="English" alt="en" src="{% static '' %}images/icons/en.png" width="18" height="12" /> English
+													</a>
+													<ul>
+														<li class="icl-en">
+															<a href="{% static '' %}#">
+																<img class="iclflag" title="English" alt="en" src="{% static '' %}images/icons/en.png" width="18" height="12" /> English
+															</a>
+														</li>
+
+														<li class="icl-ar">
+															<a href="{% static '' %}#">
+																<img class="iclflag" title="Arabic" alt="ar" src="{% static '' %}images/icons/ar.png" width="18" height="12" /> Arabic
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget widget_currency_converter pull-left">
+								<div class="widget-inner">
+									<ul class="currency_w">
+										<li>
+											<a href="{% static '' %}#" class="">USD</a>
+											<ul class="currency_switcher">
+												<li><a href="{% static '' %}#" class="reset default active">USD</a></li>
+												<li><a href="{% static '' %}#">EUR</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="wrap-myacc pull-right">
+						   <div class="pull-left top3">
+							  <div class="widget-1 widget-first widget nav_menu-6 widget_nav_menu">
+								 <div class="widget-inner">
+									<ul id="menu-my-account-index-3" class="menu">
+									   <li class="menu-my-account"><a class="item-link" href=""><span class="menu-title">我的账户</span></a></li>
+									   <li class="menu-wishlist"><a class="item-link" href="" title="My Wishlist" style="cursor: auto;"><span class="menu-title">我的收藏</span></a></li>
+									   <li class="menu-checkout"><a class="item-link" href=""><span class="menu-title">登出</span></a></li>
+									</ul>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+					</div>
 				</div>
-
-				<div class="block-content">
-					<div class="col-reg registered-account">
-						<div class="email-input">
-							<input type="text" class="form-control input-text username" name="username" id="username" placeholder="Username" />
+			</div>
+			<div class="header-mid clearfix">
+				<div class="container">
+					<div class="rows">
+						<!-- LOGO -->
+						<div class="etrostore-logo pull-left">
+							<a href="{% static '' %}home_page_1.html">
+								<img src="{% static 'images/logos/logo-index3.png' %}" alt="Shoopy">
+							</a>
 						</div>
+						<div class="mid-header pull-right">
+							<div class="widget-1 widget-first widget sw_top-10 sw_top">
+							   <div class="widget-inner">
+                                   <!--搜索框-->
+								  <div class="top-form top-search">
+									 <div class="topsearch-entry">
+										  <input type="text" value="" name="s" placeholder="输入您想搜索的内容...">
+										  <div class="cat-wrapper">
+											 <label class="label-search">
+												<select name="search_category" class="s1_option">
+												   <option value="">所有类别</option>
+												   <option value="8">Computers &amp; Laptops</option>
+												   <option value="13">Computers &amp; Networking</option>
+												   <option value="14">Smartphones &amp; Tablet</option>
+												   <option value="15">Home Furniture</option>
+												   <option value="16">Home Appliances</option>
+												   <option value="17">Electronic Component</option>
+												   <option value="18">Household Goods</option>
+												   <option value="32">Appliances</option>
+												   <option value="49">Accessories</option>
+												   <option value="51">Electronics</option>
+												   <option value="78">Televisions</option>
+												   <option value="80">Cameras &amp; Accessories</option>
+												</select>
+											 </label>
+										  </div>
+										  <button type="button" title="Search" class="fa fa-search button-search-pro"></button>
+									 </div>
+								  </div>
+							   </div>
+							</div>
 
-						<div class="pass-input">
-							<input class="form-control input-text password" type="password" placeholder="Password" name="password" id="password" />
-						</div>
+							<div class="widget sw_top-11 sw_top pull-left">
+								<div class="widget-inner">
+									<div class="top-form top-form-minicart etrostore-minicart pull-right">
+										<div class="top-minicart-icon pull-right">
+											<i class="fa fa-shopping-cart"></i>
+											<a class="cart-contents" href="{% static '' %}cart.html" title="View your shopping cart"><span class="minicart-number">2</span></a>
+										</div>
 
-						<div class="ft-link-p">
-							<a href=" lost_password.html" title="Forgot your password">Forgot your password?</a>
-						</div>
+										<div class="wrapp-minicart">
+											<div class="minicart-padding">
+												<div class="number-item">There are <span>items</span> in your cart</div>
+												<ul class="minicart-content">
+													<li>
+														<a href="{% static '' %}simple_product.html" class="product-image">
+															<img width="100" height="100" src="{% static '' %}images/1903/45-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" srcset="images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w" sizes="(max-width: 100px) 100vw, 100px">
+														</a>
 
-						<div class="actions">
-							<div class="submit-login">
-								<input type="submit" class="button btn-submit-login" name="login" value="Login" />
+														<div class="detail-item">
+															<div class="product-details">
+																<h4><a class="title-item" href="{% static '' %}simple_product.html">veniam dolore</a></h4>
+																<div class="product-price">
+																	<span class="price"><span class="woocommerce-Price-amount amount">$190.00</span></span>
+																	<div class="qty">
+																		<span class="qty-number">1</span>
+																	</div>
+																</div>
+
+																<div class="product-action clearfix">
+																	<a href="{% static '' %}" class="btn-remove" title="Remove this item"><span class="fa fa-trash-o"></span></a>
+																	<a class="btn-edit" href="{% static '' %}cart.html" title="View your shopping cart"><span class="fa fa-pencil"></span></a>
+																</div>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<a href="{% static '' %}simple_product.html" class="product-image">
+															<img width="100" height="100" src="{% static 'images/1903/22-150x150.jpg' %}" class="attachment-100x100 size-100x100 wp-post-image" alt="" srcset="{% static 'images/1903/22-150x150.jpg ' %}150w, {% static 'images/1903/22-300x300.jpg' %} 300w, {% static 'images/1903/22-180x180.jpg' %} 180w, {% static 'images/1903/22.jpg' %} 600w" sizes="(max-width: 100px) 100vw, 100px">
+														</a>
+
+														<div class="detail-item">
+															<div class="product-details">
+																<h4><a class="title-item" href="{% static '' %}simple_product.html">Cleaner with bag</a></h4>
+
+																<div class="product-price">
+																	<span class="price"><span class="woocommerce-Price-amount amount">$350.00</span></span>
+																	<div class="qty">
+																		<span class="qty-number">1</span>
+																	</div>
+																</div>
+
+																<div class="product-action clearfix">
+																	<a href="{% static '' %}" class="btn-remove" title="Remove this item"><span class="fa fa-trash-o"></span></a>
+																	<a class="btn-edit" href="{% static '' %}cart.html" title="View your shopping cart"><span class="fa fa-pencil"></span></a>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+
+												<div class="cart-checkout">
+													<div class="price-total">
+														<span class="label-price-total">Total</span>
+														<span class="price-total-w"><span class="price"><span class="woocommerce-Price-amount amount">$540.00</span></span></span>
+													</div>
+
+													<div class="cart-links clearfix">
+														<div class="cart-link"><a href="{% static '' %}cart.html" title="Cart">View Cart</a></div>
+														<div class="checkout-link"><a href="{% static '' %}checkout.html" title="Check Out">Check Out</a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							   </div>
+							</div>
+                            {# 登录弹窗 #}
+							<div class="widget sw_top-12 sw_top pull-left">
+								<div class="widget-inner">
+									<div class="top-login">
+										<div class="div-logined">
+											<ul>
+												<li>
+													<a href="{% static '' %}javascript:void(0);" data-toggle="modal" data-target="#login_form"><span>登录</span></a>
+
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			{# 导航栏 #}
+            <div class="header-bottom clearfix">
+				<div class="container">
+					<div class="rows">
+						<!-- Primary navbar -->
+						<div id="main-menu" class="main-menu">
+							<nav id="primary-menu" class="primary-menu">
+								<div class="navbar-inner navbar-inverse">
 
-					<div class="col-reg login-customer">
-						<h2>NEW HERE?</h2>
+									<ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
+										<li class="active dropdown menu-home etrostore-mega-menu level1">
+											<a href="{% url 'product:index' %}" class="item-link dropdown-toggle">
+												<span class="have-title">
+													<span class="menu-color" data-color="#f034ca"></span>
+													<span class="menu-title">首页</span>
+												</span>
+											</a>
 
-						<p class="note-reg">Registration is free and easy!</p>
+										</li>
+										<li class="menu-about-us etrostore-menu-custom level1">
+											<a href="" class="item-link">
+												<span class="have-title">
+													<span class="menu-title">关于我们</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						<!-- /Primary navbar -->
+					</div>
+				</div>
+			</div>
+		</header>
+        {% block container %}{% endblock container %}
 
-						<ul class="list-log">
-							<li>Faster checkout</li>
+        <footer id="footer" class="footer default theme-clearfix">
+			<!-- Content footer -->
+			<div class="container">
+				<div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row vc_row-fluid footer-style2 footer-style4">
+					<div class="vc_column_container vc_col-sm-12">
+						<div class="vc_column-inner ">
+							<div class="wpb_wrapper">
+								<div class=" wpb_content_element ">
+									<div class="wpb_wrapper">
+										<div class="wrap-quest">
+											<div class="row">
+												<div class="item item-1 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+													<a href="#" class="wrap">
+														<div class="icon">icon1</div>
+														<div class="content">
+															<h3>Do you have any questions?</h3>
+															<p>Email.example@gmail.com</p>
+														</div>
+													</a>
+												</div>
 
-							<li>Save multiple shipping addresses</li>
+												<div class="item item-2 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+													<a href="#" class="wrap">
+														<div class="icon">icon2</div>
+														<div class="content">
+															<h3>1234-567-890</h3>
+															<p>Mon - Fri: 8:00 - 17:00</p>
+														</div>
+													</a>
+												</div>
 
-							<li>View and track orders and more</li>
-						</ul>
+												<div class="item item-3 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+													<a href="#" class="wrap">
+														<div class="icon">icon3</div>
+														<div class="content">
+														   <h3>Need help with bying?</h3>
+														   <p>Support@etrostore.com</p>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 
-						<a href=" create_account.html" title="Register" class="btn-reg-popup">Create an account</a>
+								<div class="vc_row vc_inner vc_row-fluid">
+									<div class="vc_column_container vc_col-sm-6 vc_col-lg-2 vc_col-md-2 vc_col-xs-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="vc_wp_custommenu wpb_content_element">
+													<div class="widget widget_nav_menu">
+														<h2 class="widgettitle">Support</h2>
+														<ul id="menu-support" class="menu">
+															<li class="menu-product-support"><a class="item-link" href="#"><span class="menu-title">Product Support</span></a></li>
+															<li class="menu-pc-setup-support-services"><a class="item-link" href="#"><span class="menu-title">PC Setup &amp; Support Services</span></a></li>
+															<li class="menu-extended-service-plans"><a class="item-link" href="#"><span class="menu-title">Extended Service Plans</span></a></li>
+															<li class="menu-community"><a class="item-link" href="#"><span class="menu-title">Community</span></a></li>
+															<li class="menu-product-manuals"><a class="item-link" href="#"><span class="menu-title">Product Manuals</span></a></li>
+															<li class="menu-product-registration"><a class="item-link" href="#"><span class="menu-title">Product Registration</span></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="vc_column_container vc_col-sm-6 vc_col-lg-2 vc_col-md-2 vc_col-xs-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="vc_wp_custommenu wpb_content_element">
+													<div class="widget widget_nav_menu">
+														<h2 class="widgettitle">Your Links</h2>
+														<ul id="menu-your-links-2" class="menu">
+															<li class="menu-my-account"><a class="item-link" href="my_account.html"><span class="menu-title">My Account</span></a></li>
+															<li class="menu-order-tracking"><a class="item-link" href="#"><span class="menu-title">Order Tracking</span></a></li>
+															<li class="menu-watch-list"><a class="item-link" href="#"><span class="menu-title">Watch List</span></a></li>
+															<li class="menu-customer-service"><a class="item-link" href="#"><span class="menu-title">Customer Service</span></a></li>
+															<li class="menu-returns-exchanges"><a class="item-link" href="#"><span class="menu-title">Returns / Exchanges</span></a></li>
+															<li class="menu-faqs"><a class="item-link" href="#"><span class="menu-title">FAQs</span></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="vc_column_container vc_col-sm-6 vc_col-lg-4 vc_col-md-4 vc_col-xs-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class=" wpb_content_element ">
+													<div class="wpb_wrapper">
+														<div class="infomation">
+															<h2>CONTACT INFO</h2>
+															<div class="info-support">
+																<ul>
+																	<li>No 1123, Marmora Road, Glasgow, D04 89GR.</li>
+																	<li>(801) 2345 - 6788 / (801) 2345 - 6789</li>
+																	<li>support@etrostore.com</li>
+																</ul>
+															</div>
+
+															<div class="shop-social">
+																<ul>
+																	<li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+																	<li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+																	<li><a href="https://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+																	<li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+																	<li><a href="https://www.pinterest.com"><i class="fa fa-pinterest-p"></i></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+										   </div>
+										</div>
+									</div>
+
+									<div class="vc_column_container vc_col-sm-6 vc_col-lg-4 vc_col-md-4 vc_col-xs-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="wpb_text_column wpb_content_element ">
+													<div class="wpb_wrapper">
+														<div class="wrap-newletters">
+															<h3>Newsletter</h3>
+
+															<div class="info-newsletter">
+																<p>Get all the best deals, sales and offers from the best online shopping store in UAE. Sign up now !</p>
+
+																<form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-275" method="post">
+																	<div class="mc4wp-form-fields">
+																		<div class="newsletter-content">
+																			<input type="email" class="newsletter-email" name="EMAIL" placeholder="Your email" required="">
+																			<input class="newsletter-submit" type="submit" value="Subscribe">
+																		</div>
+																	</div>
+																	<div class="mc4wp-response"></div>
+																</form>
+
+																<div class="store">
+																	<a href="#">
+																		<img title="store" src="{% static '' %}images/1903/pay2.png" alt="store">
+																	</a>
+
+																	<a href="#">
+																		<img title="store" src="{% static '' %}images/1903/pay3.png" alt="store">
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="vc_row vc_inner vc_row-fluid">
+									<div class="vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class=" wpb_content_element ">
+													<div class="wpb_wrapper">
+														<div class="wrap-transport wrap-transport-style2">
+														   <div class="row">
+															  <div class="item item-1 col-lg-3 col-md-3 col-sm-6">
+																 <div class="wrap">
+																	<div class="icon"><i class="fa fa-paper-plane"></i></div>
+																	<div class="content">
+																	   <h3>Money Back Guarantee</h3>
+																	   <p>30 Days Money Back</p>
+																	</div>
+																 </div>
+															  </div>
+															  <div class="item item-2 col-lg-3 col-md-3 col-sm-6">
+																 <div class="wrap">
+																	<div class="icon"><i class="fa fa-map-marker"></i></div>
+																	<div class="content">
+																	   <h3>Free Worldwide Shipping</h3>
+																	   <p>On Order Over $100</p>
+																	</div>
+																 </div>
+															  </div>
+															  <div class="item item-3 col-lg-3 col-md-3 col-sm-6">
+																 <div class="wrap">
+																	<div class="icon"><i class="fa fa-tag"></i></div>
+																	<div class="content">
+																	   <h3>Member Discount</h3>
+																	   <p>Upto 70 % Discount</p>
+																	</div>
+																 </div>
+															  </div>
+															  <div class="item item-4 col-lg-3 col-md-3 col-sm-6">
+																 <div class="wrap">
+																	<div class="icon"><i class="fa fa-life-ring"></i></div>
+																	<div class="content">
+																	   <h3>24/7 Online Support</h3>
+																	   <p>Technical Support 24/7</p>
+																	</div>
+																 </div>
+															  </div>
+														   </div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="clear"></div>
+				<div class="vc_row-full-width vc_clearfix"></div>
 			</div>
+
+			<div class="footer-copyright style4">
+				<div class="container">
+					<!-- Copyright text -->
+					<div class="copyright-text pull-left">
+						<p>Etro Store - Premium Multipurpose HTML5/CSS3 Theme Designed by <a href="http://www.smartaddons.com">SmartAddons.Com</a>.</p>
+					</div>
+
+					<div class="sidebar-copyright pull-right">
+						<div class="widget-1 widget-first widget text-4 widget_text">
+							<div class="widget-inner">
+								<div class="textwidget">
+									<div class="payment">
+										<a href="#">
+											<img src="{% static 'images/1903/paypal.png' %}" alt="payment" title="payment">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+    </div>
+    {#  登录弹窗  #}
+    <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog block-popup-login">
+			<a href="javascript:void(0)" title="Close" class="close close-login" data-dismiss="modal">Close</a>
+
+			<div class="tt_popup_login">
+				<strong>Sign in Or Register</strong>
+			</div>
+
+			<div class="block-content">
+				<div class="col-reg registered-account">
+					<div class="email-input">
+						<input type="text" class="form-control input-text username" name="username" id="username" placeholder="Username" />
+					</div>
+
+					<div class="pass-input">
+						<input class="form-control input-text password" type="password" placeholder="Password" name="password" id="password" />
+					</div>
+
+					<div class="ft-link-p">
+						<a href="lost_password.html" title="Forgot your password">Forgot your password?</a>
+					</div>
+
+					<div class="actions">
+						<div class="submit-login">
+							<input type="submit" class="button btn-submit-login" name="login" value="Login" />
+						</div>
+					</div>
+				</div>
+
+				<div class="col-reg login-customer">
+					<h2>NEW HERE?</h2>
+
+					<p class="note-reg">Registration is free and easy!</p>
+
+					<ul class="list-log">
+						<li>Faster checkout</li>
+
+						<li>Save multiple shipping addresses</li>
+
+						<li>View and track orders and more</li>
+					</ul>
+
+					<a href="create_account.html" title="Register" class="btn-reg-popup">Create an account</a>
+				</div>
+			</div>
+			<div class="clear"></div>
 		</div>
+	</div>
+    {#  返回顶端按钮  #}
+    <a id="etrostore-totop" href="#"></a>
+    <script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery/jquery-migrate.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery/js.cookie.min.js' %}"></script>
 
-		<a id="etrostore-totop" href="#"></a>
-		<script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/jquery/jquery-migrate.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/jquery/js.cookie.min.js' %}"></script>
+	<!-- OPEN LIBS JS -->
+	<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slick-1.6.0/slick.min.js' %}"></script>
 
-		<!-- OPEN LIBS JS -->
-		<script type="text/javascript" src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/slick-1.6.0/slick.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/yith-woocommerce-compare/jquery.colorbox-min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/isotope/isotope.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/fancybox/jquery.fancybox.pack.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/sw_woocommerce/category-ajax.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/sw_woocommerce/jquery.countdown.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/js_composer/js_composer_front.min.js' %}"></script>
 
-		<script type="text/javascript" src="{% static 'js/yith-woocommerce-compare/jquery.colorbox-min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/isotope/isotope.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/fancybox/jquery.fancybox.pack.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/sw_woocommerce/category-ajax.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/sw_woocommerce/jquery.countdown.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/js_composer/js_composer_front.min.js' %}"></script>
-
-		<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/megamenu.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'js/main.min.js' %}"></script>
-
-		<script type="text/javascript">
-			var sticky_navigation_offset_top = $("#header .header-bottom").offset().top;
-			var sticky_navigation = function() {
-				var scroll_top = $(window).scrollTop();
-				if (scroll_top > sticky_navigation_offset_top) {
-					$("#header .header-bottom").addClass("sticky-menu");
-					$("#header .header-bottom").css({
-						"top": 0,
-						"left": 0,
-						"right": 0
-					});
-				} else {
-					$("#header .header-bottom").removeClass("sticky-menu");
-				}
-			};
+	<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/megamenu.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.min.js' %}"></script>
+   
+	<script type="text/javascript">
+		var sticky_navigation_offset_top = $("#header .header-bottom").offset().top;
+		var sticky_navigation = function(){
+            var scroll_top = $(window).scrollTop();
+            if (scroll_top > sticky_navigation_offset_top) {
+                $("#header .header-bottom").addClass("sticky-menu");
+                $("#header .header-bottom").css({ "top":0, "left":0, "right" : 0 });
+            } else {
+                $("#header .header-bottom").removeClass("sticky-menu");
+            }
+        };
+		sticky_navigation();
+		$(window).scroll(function() {
 			sticky_navigation();
-			$(window).scroll(function() {
-				sticky_navigation();
-			});
+		});
 
-			$(document).ready(function() {
-				$(".show-dropdown").each(function() {
-					$(this).on("click", function() {
-						$(this).toggleClass("show");
-						var $element = $(this).parent().find("> ul");
-						$element.toggle(300);
-					});
+		$(document).ready (function () {
+			$( ".show-dropdown" ).each(function(){
+				$(this).on("click", function(){
+					$(this).toggleClass("show");
+					var $element = $(this).parent().find( "> ul" );
+					$element.toggle( 300 );
 				});
 			});
-		</script>
-        {% block script %}{% endblock script %}
-	</body>
-</html>
+		});
+   </script>
+
+</body>
+
+
